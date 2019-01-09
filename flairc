@@ -1,0 +1,36 @@
+#! /usr/bin/python3
+
+import sys
+import os
+import sys
+import os
+sys.path.insert(0, 'src/')
+from src.flr_token import Token, TokenType
+from src.scanner import Scanner
+from src.error import LexicalError, ParseError, SemanticError
+from src.flr_parser import Parser
+from src.type_checker import TypeChecker
+from src.codeGen import CodeGenerator
+
+try:
+    filename = sys.argv[1]
+    myfile   = open(filename)
+    program  = myfile.read()
+    scanner  = Scanner(program)
+    parser   = Parser(scanner)
+    ast = parser.parse()
+    t_checker = TypeChecker(ast)
+    t_checker.type_check()
+    #t_checker.pretty_print()
+    tm_code = CodeGenerator(ast, t_checker.get_symbol_table(), t_checker.function_called())
+    print(tm_code.generate())
+
+
+except LexicalError as le:
+    print('Lexical error: ' + str(le))
+except ParseError as pe:
+    print('Parse error: ' + str(pe))
+except SemanticError as se:
+    print('Semantic error: ' + str(se))
+except Exception as exc:
+    print('Something went wrong: ' + str(exc))

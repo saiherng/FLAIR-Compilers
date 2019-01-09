@@ -1,0 +1,26 @@
+#! /Library/Frameworks/Python.framework/Versions/3.4/bin/python3.4
+
+import sys
+import os
+sys.path.insert(0, 'src/')
+from src.flr_token import Token, TokenType
+from src.scanner import Scanner
+from src.error import LexicalError, ParseError
+from src.flr_parser import Parser
+
+try:
+    filename = sys.argv[1]
+    myfile   = open(filename)
+    program  = myfile.read()
+
+    scanner  = Scanner(program)
+    parser   = Parser(scanner)
+    is_valid = parser.parse()
+
+    print(is_valid)
+except LexicalError as le:
+    print('Lexical error: ' + str(le))
+except ParseError as le:
+    print('Parse error: ' + str(le))
+except Exception as exc:
+    print('Something went wrong: ' + str(exc))
