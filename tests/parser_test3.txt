@@ -1,0 +1,12 @@
+program area_of_rectangle(n : integer);
+
+	function rectangle_area(width : integer, height : integer) : integer
+
+		begin
+			return width * height
+		end;
+
+begin	
+	return rectangle_area(x);
+end.
+

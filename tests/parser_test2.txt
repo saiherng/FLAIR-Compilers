@@ -1,0 +1,19 @@
+program area_of_circle(n : integer);
+
+	function square( n : integer) : integer
+
+		begin 
+			return n * n
+		end;
+
+	function circle_area(radius : integer) : integer
+
+		begin
+			return (22 / 7) * square(radius)
+		end;
+
+begin
+	print(x)
+	return circle_area(x)
+end.
+

@@ -1,0 +1,4 @@
+program recursion(number : integer, target : integer);
+begin
+	return number > target
+end

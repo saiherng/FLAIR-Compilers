@@ -1,0 +1,50 @@
+program sieve( n : integer, n:integer );
+
+   function square(n:integer, m:integer) : integer
+       begin
+           print(m);
+            return n*n
+        end;
+
+    function square(n:integer, m:integer) : integer
+       begin
+           return 1 + true
+        end;
+
+    function test(n:integer, m:integer) : integer
+       begin
+           return 2 and true
+        end;
+
+    function test2(n:integer, m:integer) : integer
+       begin
+           return
+               if 1
+                   then 1
+                   else 1
+        end;
+
+    function test3(n:integer, m:integer) : integer
+       begin
+           return
+               if true
+                   then not (1)
+                   else - true
+        end;
+
+    function test4(n:integer, m:integer) : integer
+       begin
+           return test2(true,m,1)
+        end;
+        
+   function rem( num : integer, den : integer) : integer
+   begin
+      return
+          if num < undeclared
+             then true
+             else rem( num-den, den)
+   end;
+
+begin
+   return err(a,b)
+end.

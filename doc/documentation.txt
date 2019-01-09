@@ -1,0 +1,3 @@
+We have implemented the scanner using the dfs image in this folder.
+We are part way done implementing the scanner using a table and also have the ad hoc scanner. The files for the following 
+are located in the misc folder.

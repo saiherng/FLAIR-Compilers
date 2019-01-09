@@ -1,0 +1,21 @@
+
+{This is a flair for checking positive number }
+
+program check_sign(n : integer);
+
+	function check_pos(n:integer) : integer
+
+		begin
+
+			return if n < 0:
+					then false
+					else true
+		end;
+
+
+begin
+	return check_pos(n)
+end.
+
+
+

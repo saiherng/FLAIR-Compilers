@@ -1,0 +1,12 @@
+{Program to return next number}
+
+program next_int(totalVal : integer, currentVal : integer);
+	function percentage( total : integer, curr ) : integer
+           begin
+              return (total / curr) * 100
+           end;
+begin
+  return if percentage <= 50
+	then false;
+	else true;
+end.

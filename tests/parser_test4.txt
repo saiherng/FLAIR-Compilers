@@ -1,0 +1,12 @@
+program fahrenheit_to_celcius(c : integer);
+
+	function temp_to_c( c : integer) : integer
+
+		begin 
+			return ((c - 32 ) * (5 / 9))
+		end.
+
+begin
+	return temp_to_c(x)
+end.
+

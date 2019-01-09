@@ -1,0 +1,9 @@
+
+{This is a flair for adding two fractions }
+
+program add_fraction(n1 : integer, d1 : integer, n2 : integer, d2 : integer);
+	
+begin
+	print(d2*n1 + n2*d1);
+	return d1*d2
+end.

@@ -1,0 +1,17 @@
+program main( flag : integer , boo : boolean , b : integer , b_a : integer , b1_b2_c3 : boolean , x : integer , y : integer );
+{ WELL ENJOY}
+begin
+    if flag < 0 then
+        x(y
+    else
+        x - y
+  return 2({}2
+end.
+
+
+
+
+return 
+
+
+end.

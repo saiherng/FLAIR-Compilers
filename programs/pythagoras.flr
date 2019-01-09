@@ -1,0 +1,18 @@
+{program to implement the pythagoras theorem}
+program pythagoras ( a : integer, b : integer, c : integer);
+
+	function square(n : integer) : integer
+            begin
+                    return n*n
+            end;
+	
+	function addtwo(a : integer, b : integer) : integer
+            begin
+                    return square(a) + square(b)
+            end;
+	
+        begin
+            return if (square(c) = addtwo(a,b))
+                            then yes
+                            else no
+        end.

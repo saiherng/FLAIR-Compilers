@@ -1,0 +1,13 @@
+program kilometer_to_mile ( km : integer); 
+
+	function km_to_m (km    ) : integer 
+
+		begin 
+
+			return ( km / 8 ) * 5
+
+		end; 
+
+begin 
+	return km_to_m( x ) 
+end.

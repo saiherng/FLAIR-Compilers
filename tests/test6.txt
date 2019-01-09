@@ -1,0 +1,5 @@
+program main({123});
+ending+keyword-true+false
+begin
+  return -0{-}
+end

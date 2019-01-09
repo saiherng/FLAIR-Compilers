@@ -1,0 +1,98 @@
+Author : Sai Herng
+
+As for our run time system, we have currently decided to have 4 reserve slots to store
+return value, return address, status pointer and top pointer. 
+
+Register 0: 
+Register 1: //return value
+Register 2: 
+Register 3: 
+Register 4:
+Register 5: //status pointer
+Register 6: //top pointer
+Register 7: //program counter
+
+
+The offset is calculated by the number of arguments from the symbol table. The status pointer is set below the arguments. The rest can be obtained by the diagram below. 
+
+
+DMEM
+---------
+-n : arg 1
+-2 : arg n
+-1 :  return value 
+0  :  return addr
++1 : reg0
++2 : reg1
++3 : reg2
++4 : reg3
++5 : reg4
+
+IMEM
+-----------
+0: LDC 5,-1(0)
+1: LDC 6,2(0)
+
+2: LDA 1,6(7)
+3: ST 1,1(6)
+4: ST 5,7(6)
+5: LDA 5,1(6)
+6: ST 6,8(6)
+7: LDA 6,9(6)
+9: LD 6,7(5)
+10: LD 5,6(5)
+11: LD 1,0(6)
+
+12: ST 1,1(6)
+13: LDA 1,6(7)
+14: ST 1,2(6)
+15: ST 5,8(6)
+16: LDA 5,2(6)
+17: ST 6,9(6)
+18: LDA 6,10(6)
+20: LD 6,7(5)
+21: LD 5,6(5)
+22: HALT 0,0,0
+
+*    calling sequence
+23: ST 0,1(5)
+24: ST 1,2(5)
+25: ST 2,3(5)
+26: ST 3,4(5)
+27: ST 4,5(5)
+28: LD 1,-1(5)
+*    handle body
+29: OUT 1,0,0
+*    return sequence
+30: LD 0,1(5)
+31: LD 1,2(5)
+32: LD 2,3(5)
+33: LD 3,4(5)
+34: LD 4,5(5)
+35: LD 7,0(5)
+
+*    calling sequence
+36: ST 0,1(5)
+37: ST 1,2(5)
+38: ST 2,3(5)
+39: ST 3,4(5)
+40: ST 4,5(5)
+41: LDC 2,1(0)
+42: ST 2,-1(5)
+43: LD 0,1(5)
+44: LD 1,2(5)
+45: LD 2,3(5)
+46: LD 3,4(5)
+47: LD 4,5(5)
+48: LD 7,0(5)
+
+8: LDA 7,36(0)
+19: LDA 7,23(0)
+
+
+
+
+
+
+
+

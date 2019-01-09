@@ -1,0 +1,4 @@
+program find_square(number : integer);
+begin
+	return number*number
+end
