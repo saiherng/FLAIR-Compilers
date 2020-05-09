@@ -4,8 +4,6 @@ Team Name : WillCode4Food
 
 Known bugs: What's a bug!
 
-Language features not implemented: Still in process of implementing the union type of "print"
-
 To run the type checker, run flairc or src/mainCodeGenerator
 
 Features: 
