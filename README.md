@@ -1,10 +1,7 @@
 # Flair_compiler
 Team : Sai, Rishabh, Phu  
-Team Name : WillCode4Food
 
-Known bugs: What's a bug!
-
-To run the type checker, run flairc or src/mainCodeGenerator
+This program translates Flair Programming Langauage to assembly language. To run the type checker, run flairc or src/mainCodeGenerator.py
 
 Features: 
  Attempted extra credit. 
